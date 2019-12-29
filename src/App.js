@@ -52,13 +52,9 @@ const bankOne = [{
 ];
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      display: null
-
-    }
-  }
+  // constructor(props) {
+  //   super(props)
+  // }
 
   
 

@@ -3,14 +3,17 @@ import { render } from '@testing-library/react';
 
 
 class DrumPad extends React.Component {
-    // constructor(props) {
-    //     super(props)
-        
-    // }
+    constructor(props) {
+        super(props)
+        this.state = {
+            displayText: ""
+        }
+    }
 
     handleClick = () => {
         this.audio.play();
         this.audio.currentTime = 0;
+        this.setState({displayText: this.props.padname})
 
     }
 
@@ -26,6 +29,7 @@ class DrumPad extends React.Component {
         if (event.keyCode === this.props.keycode) {
             this.audio.play();
             this.audio.currentTime = 0;
+            this.setState({displayText: this.props.padname})
         }
 
     }
