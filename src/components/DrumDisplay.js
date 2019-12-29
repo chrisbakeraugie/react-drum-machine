@@ -1,72 +1,21 @@
 import React from 'react';
 import DrumPad from "/Users/chrisbaker/react-drum-machine/src/components/DrumPad.js"
 
-const bankOne = [{
-    keyCode: 81,
-    keyTrigger: 'Q',
-    id: 'Heater-1',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3'
-  }, {
-    keyCode: 87,
-    keyTrigger: 'W',
-    id: 'Heater-2',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3'
-  }, {
-    keyCode: 69,
-    keyTrigger: 'E',
-    id: 'Heater-3',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3'
-  }, {
-    keyCode: 65,
-    keyTrigger: 'A',
-    id: 'Heater-4',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3'
-  }, {
-    keyCode: 83,
-    keyTrigger: 'S',
-    id: 'Clap',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3'
-  }, {
-    keyCode: 68,
-    keyTrigger: 'D',
-    id: 'Open-HH',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3'
-  }, {
-    keyCode: 90,
-    keyTrigger: 'Z',
-    id: "Kick-n'-Hat",
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'
-  }, {
-    keyCode: 88,
-    keyTrigger: 'X',
-    id: 'Kick',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3'
-  }, {
-    keyCode: 67,
-    keyTrigger: 'C',
-    id: 'Closed-HH',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
-  },
-  ];
 
-  console.log(bankOne[0].keyTrigger);
   
 const DrumDisplay = (props) => (
     <div id={props.id}>
-        <DrumPad id={bankOne[0].keyTrigger} src={bankOne[0].url} onClick={handleClick}></DrumPad>
-        <DrumPad id={bankOne[1].keyTrigger} src={bankOne[1].url}></DrumPad>
-        <DrumPad id={bankOne[2].keyTrigger} src={bankOne[2].url}></DrumPad>
-        <DrumPad id={bankOne[3].keyTrigger} src={bankOne[3].url}></DrumPad>
-        <DrumPad id={bankOne[4].keyTrigger} src={bankOne[4].url}></DrumPad>
-        <DrumPad id={bankOne[5].keyTrigger} src={bankOne[5].url}></DrumPad>
-        <DrumPad id={bankOne[6].keyTrigger} src={bankOne[6].url}></DrumPad>
-        <DrumPad id={bankOne[7].keyTrigger} src={bankOne[7].url}></DrumPad>
-        <DrumPad id={bankOne[8].keyTrigger} src={bankOne[8].url}></DrumPad>
+        <DrumPad id={props.bankOne[0].keyTrigger} src={props.bankOne[0].url} keycode={props.bankOne[0].keyCode} padname={props.bankOne[0].id}></DrumPad>
+        <DrumPad id={props.bankOne[1].keyTrigger} src={props.bankOne[1].url} keycode={props.bankOne[1].keyCode} padname={props.bankOne[1].id}></DrumPad>
+        <DrumPad id={props.bankOne[2].keyTrigger} src={props.bankOne[2].url} keycode={props.bankOne[2].keyCode} padname={props.bankOne[2].id}></DrumPad>
+        <DrumPad id={props.bankOne[3].keyTrigger} src={props.bankOne[3].url} keycode={props.bankOne[3].keyCode} padname={props.bankOne[3].id}></DrumPad>
+        <DrumPad id={props.bankOne[4].keyTrigger} src={props.bankOne[4].url} keycode={props.bankOne[4].keyCode} padname={props.bankOne[4].id}></DrumPad>
+        <DrumPad id={props.bankOne[5].keyTrigger} src={props.bankOne[5].url} keycode={props.bankOne[5].keyCode} padname={props.bankOne[5].id}></DrumPad>
+        <DrumPad id={props.bankOne[6].keyTrigger} src={props.bankOne[6].url} keycode={props.bankOne[6].keyCode} padname={props.bankOne[6].id}></DrumPad>
+        <DrumPad id={props.bankOne[7].keyTrigger} src={props.bankOne[7].url} keycode={props.bankOne[7].keyCode} padname={props.bankOne[7].id}></DrumPad>
+        <DrumPad id={props.bankOne[8].keyTrigger} src={props.bankOne[8].url} keycode={props.bankOne[8].keyCode} padname={props.bankOne[8].id}></DrumPad>
     </div>
 )
 
-function handleClick() {
-    console.log("Clicked");
-}
 
 export default DrumDisplay;
