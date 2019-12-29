@@ -1,12 +1,28 @@
 import React from 'react';
+import { render } from '@testing-library/react';
 
 
-const DrumKey = (props) => (
-    <div id={props.id} className="drum-pad">
-        {props.id}
-        <audio src={props.audioClip} id={props.id} className={props.clip}></audio>
+class DrumPad extends React.Component {
+    // constructor(props) {
+    //     super(props)
+    // }
 
-    </div>
-)
+    handleClick = () =>{
+        this.audio.play();
+        this.audio.currentTime = 0;
+    }
 
-export default DrumKey;
+    render() {
+        return (
+            <div id={this.props.id} className="drum-pad" onClick={this.handleClick}>
+                {this.props.id}
+                <audio src={this.props.src} id={this.props.id} className="clip" ref={ref => this.audio =ref}></audio>
+            </div>
+        );
+    }
+}
+
+
+
+
+export default DrumPad;
