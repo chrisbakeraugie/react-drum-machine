@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+
 
 
 class DrumPad extends React.Component {
@@ -10,10 +10,13 @@ class DrumPad extends React.Component {
         }
     }
 
+    /**
+     * This repesonds to clicks on the screen, plays the audio file, and sends the correct id back to the handleDisplay method in App.js
+     */
     handleClick = () => {
         this.audio.play();
         this.audio.currentTime = 0;
-        this.setState({displayText: this.props.padname})
+        this.props.handleDisplay(this.props.padname)
 
     }
 
@@ -25,11 +28,15 @@ class DrumPad extends React.Component {
         document.removeEventListener('keydown', this.handleKeyDown);
     }
 
+    /**
+    * This repesonds to keydowns, plays the audio file, and sends the correct id back to the handleDisplay method in App.js
+    */
     handleKeyDown = (event) => {
         if (event.keyCode === this.props.keycode) {
             this.audio.play();
             this.audio.currentTime = 0;
-            this.setState({displayText: this.props.padname})
+            this.setState({ displayText: this.props.padname })
+            this.props.handleDisplay(this.props.padname)
         }
 
     }

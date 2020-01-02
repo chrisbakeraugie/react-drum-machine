@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import DrumDisplay from './components/DrumDisplay.js'
 
@@ -52,18 +51,27 @@ const bankOne = [{
 ];
 
 class App extends React.Component {
-  // constructor(props) {
-  //   super(props)
-  // }
+  constructor(props) {
+    super(props)
+    this.state = {
+      display: "Press a key or click a pad"
+    }
+  }
 
-  
-
+  /**
+   * This method changes the state when one of the DrumPad comp are triggered
+   */
+  handleDisplay = (newDisplay) => {
+    this.setState({
+      display: newDisplay
+    })
+  }
 
   render() {
     return (
       <div id="drum-machine" className="App">
 
-        <DrumDisplay id="display" bankOne={bankOne}></DrumDisplay>
+        <DrumDisplay id="display" bankOne={bankOne} display={this.state.display} handleDisplay={this.handleDisplay}></DrumDisplay>
 
       </div>
     )
