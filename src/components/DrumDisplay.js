@@ -1,5 +1,5 @@
 import React from 'react';
-import DrumPad from "/Users/chrisbaker/react-drum-machine/src/components/DrumPad.js"
+import DrumPad from "./DrumPad.js"
 
 
 
