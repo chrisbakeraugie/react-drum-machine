@@ -5,7 +5,7 @@ import DrumPad from "/Users/chrisbaker/react-drum-machine/src/components/DrumPad
 
 const DrumDisplay = (props) => (
     <div id={props.id}>
-        {props.display}
+        <div id="display-text">{props.display}</div>
         <DrumPad id={props.bankOne[0].keyTrigger} src={props.bankOne[0].url} keycode={props.bankOne[0].keyCode} padname={props.bankOne[0].id} handleDisplay={props.handleDisplay}></DrumPad>
         <DrumPad id={props.bankOne[1].keyTrigger} src={props.bankOne[1].url} keycode={props.bankOne[1].keyCode} padname={props.bankOne[1].id} handleDisplay={props.handleDisplay}></DrumPad>
         <DrumPad id={props.bankOne[2].keyTrigger} src={props.bankOne[2].url} keycode={props.bankOne[2].keyCode} padname={props.bankOne[2].id} handleDisplay={props.handleDisplay}></DrumPad>
