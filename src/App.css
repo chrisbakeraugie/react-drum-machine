@@ -1,29 +1,33 @@
-.App {
-  text-align: center;
-  /* display: grid;
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 35vh; */
+
+body{  
+  padding:0;
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 100vh;
+  background-image: linear-gradient(to bottom,  ivory, darkgray);
 }
 
-body{
-  background-color: gray;
+
+.App {
+  text-align: center;
+
 }
 
 #display {
   margin: auto;
-  margin-top: 35vh;
-  background-color: gray;
+  padding: 10px;
+  margin-top: 20vh;
+  background-color: rgb(106, 153, 173);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   width:600px;
-  height: 500px;
+  min-height: 400px;
   grid-area: 1/1/2/4;
-
-
+  border: solid black;
+  border-radius: 10px;
 }
 
 #display-text{
@@ -32,7 +36,10 @@ body{
 .drum-pad {
   display:grid;
   text-align: center;
-  background-color: green;
+  background-image: radial-gradient(100px, ivory, rgb(216, 216, 216));
+  border: solid black;
+  border-radius: 10px;
+  font-size: 30px;
 }
 
 #Q{
@@ -69,4 +76,14 @@ body{
 
 #C{
   grid-area: 4 / 3 / 5 / 4;
+}
+
+@media only screen and (max-width:808px){
+  body{
+    background-image: none;
+    background-color: rgb(46,48,53);
+  }
+  #display{
+    width: 95vw;
+  }
 }
