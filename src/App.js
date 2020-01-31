@@ -78,7 +78,7 @@ class App extends React.Component {
       <br/>
       To see the code and my other work, visit my github page.
       <br/>
-      <a href="https://github.com/chrisbakeraugie" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} size="2x" href="www.chrisbakeraugie.github.io"></FontAwesomeIcon></a>
+      <a href="https://github.com/chrisbakeraugie/react-drum-machine" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} size="2x" href="www.chrisbakeraugie.github.io"></FontAwesomeIcon></a>
       </h3>
       
       
