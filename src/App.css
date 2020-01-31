@@ -1,10 +1,11 @@
-
+*{
+  font-family: 'Source Sans Pro', sans-serif;
+}
 body{  
   padding:0;
   margin: 0;
-  font-family: 'Source Sans Pro', sans-serif;
   height: 100vh;
-  background-image: linear-gradient(to bottom,  ivory, darkgray);
+
 }
 
 
@@ -13,11 +14,23 @@ body{
 
 }
 
+
+h3{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: x-large;
+  font-weight: normal;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
 #display {
   margin: auto;
   padding: 10px;
   margin-top: 20vh;
-  background-color: rgb(106, 153, 173);
+  background-color: slategrey;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -27,7 +40,7 @@ body{
   min-height: 400px;
   grid-area: 1/1/2/4;
   border: solid black;
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
 #display-text{
@@ -36,10 +49,14 @@ body{
 .drum-pad {
   display:grid;
   text-align: center;
-  background-image: radial-gradient(100px, ivory, rgb(216, 216, 216));
+  background-color: white;
   border: solid black;
-  border-radius: 10px;
+  border-radius: 2px;
   font-size: 30px;
+}
+
+.drum-pad:hover{
+  opacity: .5;
 }
 
 #Q{
@@ -78,12 +95,19 @@ body{
   grid-area: 4 / 3 / 5 / 4;
 }
 
+footer{
+  font-size: x-large;
+}
+
 @media only screen and (max-width:808px){
   body{
     background-image: none;
     background-color: rgb(46,48,53);
+    color: white;
   }
   #display{
+    margin-top: 10vh;
     width: 95vw;
+    color: black;
   }
 }

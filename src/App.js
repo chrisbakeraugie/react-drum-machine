@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
 import DrumDisplay from './components/DrumDisplay.js'
+import { faGithub  } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const bankOne = [{
   keyCode: 81,
@@ -70,8 +73,20 @@ class App extends React.Component {
   render() {
     return (
       <div id="drum-machine" className="App">
-
+      <h3>
+      This drum machine will respond to either keystrokes or clicks. 
+      <br/>
+      To see the code and my other work, visit my github page.
+      <br/>
+      <a href="https://github.com/chrisbakeraugie" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} size="2x" href="www.chrisbakeraugie.github.io"></FontAwesomeIcon></a>
+      </h3>
+      
+      
         <DrumDisplay id="display" bankOne={bankOne} display={this.state.display} handleDisplay={this.handleDisplay}></DrumDisplay>
+        <br/>
+        <footer>
+          Made by Chris Baker
+          </footer>
 
       </div>
     )
